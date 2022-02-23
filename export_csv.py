@@ -1,5 +1,4 @@
 import requests
-import csv
 import pandas as pd
 
 def main():
@@ -15,14 +14,5 @@ def main():
     df = pd.DataFrame(rows, columns=headers)
     
     df.to_csv('./assortment.csv', index=False)
-    
-    '''
-    f = open('./assortment.csv', 'w', newline="")
-    writer = csv.writer(f)
-    writer.writerow(headers)
-    for i in range(len(rows)):
-        writer.writerow(rows[i])
-    f.close()
-    '''
     
 main()
